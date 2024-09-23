@@ -12,3 +12,23 @@
 На выходе:
 ● 1 3 5 7 */
 
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int i = 1;
+
+if (num > 0)
+{
+    while (i <= num)
+    {
+        Console.Write($"{i} ");
+        i += 2; //i = i + 2;
+    }
+}
+else
+{
+    while (i >= num)
+    {
+        Console.Write($"{i} ");
+        i -= 2; //i = i + 2;
+    }
+}
