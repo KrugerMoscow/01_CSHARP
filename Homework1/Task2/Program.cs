@@ -15,3 +15,24 @@
 На выходе:
 ● 7 */
 
+Console.Write("Введите первое число: ");
+int firstNum = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите второе число: ");
+int secondtNum = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите третье число: ");
+int thirdNum = Convert.ToInt32(Console.ReadLine());
+
+if (firstNum >= secondtNum && firstNum <= thirdNum || firstNum >= thirdNum && firstNum <= secondtNum) // c>a>b || b>a>c
+{
+    Console.WriteLine(firstNum);
+}
+else if (secondtNum >= firstNum && secondtNum <= thirdNum || secondtNum >= thirdNum && secondtNum <= firstNum) // c>b>a || a>b>c
+{
+    Console.WriteLine(secondtNum);
+}
+else
+{
+    Console.WriteLine(thirdNum);
+}
