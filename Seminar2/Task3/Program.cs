@@ -7,3 +7,20 @@
 16, 8 => да
 4, 3 => нет, 1 */
 
+Console.Write("Введите первое число: ");
+int firstDigit = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите второе число: ");
+int secondDigit = Convert.ToInt32(Console.ReadLine());
+
+int result = firstDigit % secondDigit;
+
+if ( result == 0)
+{
+    Console.WriteLine("Да");
+    
+}
+else
+{
+    Console.WriteLine($"Нет, {result}");
+}
