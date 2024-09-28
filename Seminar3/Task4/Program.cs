@@ -6,3 +6,40 @@
 456 => [6 5 4]
 781 => [1 8 7] */
 
+//Решение подходит не только для трехзначных чисел
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int numCopy = num; // копируем число num, чтобы оно не изменялось в процессе работы цикла
+int count = 0; // счетчик для определения длины числа, а в дальшейнем и массива
+
+while (numCopy != 0) // счетчик для определения количества цифр в числе
+{
+    numCopy /= 10; // numCopy = numCopy / 10
+    count++;
+}
+
+int[] array = new int[count]; // создаем массив длиной count
+
+for (int i = 0; i < array.Length; i++) // выводит в консоль значения в обратном порядке (как в условии)
+//for (int i = count-1; i >= 0; i--) // выводит в консоль значения в таком же порядке как num
+{
+    array[i] = num % 10;
+    num /= 10;
+}
+
+Console.Write("[");
+
+for (int i = 0; i < array.Length; i++)
+{
+    if (i != count - 1)
+    {
+        Console.Write(array[i] + " ");
+    }
+    else
+    {
+        Console.Write(array[i]); // убираем пробел в конце вывода
+    }
+}
+
+Console.Write("]");
+
