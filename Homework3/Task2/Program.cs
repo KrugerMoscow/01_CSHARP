@@ -18,11 +18,11 @@ for (int i = 0; i < array.Length; i++)
     {
         array[i] *= -1;
 
-        if (i == 0)
+        if(i == 0)
         {
             Console.Write("[");
         }
-
+        
         if (i != array.Length - 1) // убирает пробел после последней цифры
         {
             Console.Write(array[i] + " ");
