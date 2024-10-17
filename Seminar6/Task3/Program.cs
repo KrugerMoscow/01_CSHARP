@@ -22,6 +22,8 @@
     return count;
 } */
 
+// Вариант 2:
+
 int CountOfVowelLetters(string str)
 {
     string vowelLetters = "aeiouy";
